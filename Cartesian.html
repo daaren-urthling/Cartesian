@@ -13,26 +13,15 @@ Your browser does not support the canvas element.
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 
-var cart = new Cartesian(document.getElementById("myCanvas"));
+var cart = new Cartesian(document.getElementById("myCanvas"), 12);
 cart.drawPlan();
 cart.drawMarks();
-// ctx.fillRect(1,1,5,5);
-// cart.drawPoint(20,20);
-// ctx.setTransform(20, 0, 0, -20, 700, 500);
-// ctx.scale(20,20);
-// ctx.lineWidth=0.1;
 
-cart.drawPolygon([{x:-0,y:0,l:'A'}, {x:2,y:11,l:'B'}, {x:-3, y:-6,l:'C'}]);
-
-//cart.drawPolygon([{x:-1,y:1,l:'A'}, {x:3,y:-1, l:'B'}, {x:7,y:1, l:'C'}, {x:3,y:3, l:'D'}]);
-
-// ctx.beginPath();
-// ctx.moveTo(1,1);
-// ctx.lineTo(7,1);
-// ctx.fillText("A",7,1);
-// ctx.lineTo(4,5);
-// ctx.lineTo(1,1);
-// ctx.stroke();
+cart.drawPolygon([
+    {x:-0, y:0, l:'A'}, 
+    {x:2, y:11, l:'B'}, 
+    {x:-3, y:-6, l:'C'}
+]);
 
 </script>
 

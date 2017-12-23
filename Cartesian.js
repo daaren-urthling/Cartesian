@@ -1,9 +1,9 @@
 //=============================================================================
-function Cartesian(aCanvas) {
+function Cartesian(aCanvas, nMax) {
   var canvas = aCanvas;
   var maxX = canvas.width / 2;
   var maxY = canvas.height / 2;
-  var scale = maxX / 12;
+  var scale = maxX / (nMax ? nMax : 12);
   var ctx = canvas.getContext("2d");
 
   ctx.setTransform(1, 0, 0, 1, maxX, maxY);
